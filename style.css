@@ -77,6 +77,7 @@ ul.check-list li::before {
 .wp-block-button a:hover {
   background-color: var(--wp--preset--color--primary-100) !important;
 }
+
 .wp-block-button a:focus {
   border: .125rem solid var(--wp--preset--color--accent);
 }
@@ -132,8 +133,7 @@ ul.check-list li::before {
   padding: .75rem 1rem;
 }
 
-.site-header .wp-block-navigation-item.current-menu-item
-  > .wp-block-navigation-item__content {
+.site-header .wp-block-navigation-item.current-menu-item>.wp-block-navigation-item__content {
   text-decoration: underline;
   text-underline-offset: .5rem;
   text-decoration-color: #00999a;
@@ -150,7 +150,7 @@ ul.check-list li::before {
   overflow: hidden !important;
 }
 
-.site-header .wp-block-navigation > .wp-block-navigation-item {
+.site-header .wp-block-navigation>.wp-block-navigation-item {
   padding: .8125rem 0;
 }
 
@@ -210,6 +210,7 @@ header.stuck {
     justify-content: flex-start;
     padding: 3.125rem 1.25rem;
   }
+
   header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul {
     width: 100%;
   }
@@ -303,13 +304,13 @@ header.stuck {
 
 /********** Home Page **********/
 /* Hero Banner */
-.hero-banner ,
+.hero-banner,
 .hero-cover {
   position: relative;
   z-index: 0;
 }
 
-.hero-banner::before , 
+.hero-banner::before,
 .hero-cover::before {
   content: '';
   position: absolute;
@@ -322,12 +323,10 @@ header.stuck {
 }
 
 .hero-banner::before {
-  background: linear-gradient(
-    270deg,
-    rgba(0, 153, 154, 0.9) 0%,
-    rgba(2, 45, 94, 0.9) 57.5%,
-    rgba(0, 10, 31, 0.9) 100%
-  );
+  background: linear-gradient(270deg,
+      rgba(0, 153, 154, 0.9) 0%,
+      rgba(2, 45, 94, 0.9) 57.5%,
+      rgba(0, 10, 31, 0.9) 100%);
   z-index: -1;
 }
 
@@ -337,7 +336,7 @@ header.stuck {
 }
 
 .hero-banner.has-contrast-background-color:before,
-.hero-cover.has-contrast-background-color:before{
+.hero-cover.has-contrast-background-color:before {
   display: none;
 }
 
@@ -541,9 +540,11 @@ header.stuck {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .contact-form form .ff-btn-submit:not(.ff_btn_no_style):hover {
   background-color: var(--wp--preset--color--primary-800) !important;
 }
+
 .contact-form .ff-default .ff_btn_style:focus,
 .contact-form .ff-default .ff_btn_style:hover {
   background-color: var(--wp--preset--color--primary-800);
@@ -551,15 +552,18 @@ header.stuck {
   outline: 0;
   text-decoration: none;
 }
+
 .contact-form .fluentform .ff-text-left {
   display: flex;
   justify-content: end;
 }
+
 @media (max-width: 781px) {
   .contact-form .fluentform .ff-text-left {
     justify-content: start;
   }
 }
+
 .contact-form .ff-default .ff-el-form-control {
   width: 100%;
   border: .0625rem solid var(--wp--preset--color--primary-300);
@@ -571,14 +575,17 @@ header.stuck {
   background: var(--wp--preset--color--primary-200);
   color: var(--wp--preset--color--primary-900);
 }
+
 .contact-form .ff-default .ff-el-form-control:focus {
   border: .0625rem solid var(--wp--preset--color--primary-500);
   background: var(--wp--preset--color--primary-300);
   color: var(--wp--preset--color--primary-900);
 }
+
 .contact-form .ff-default .ff-el-form-control::placeholder {
   color: var(--wp--preset--color--primary-900);
 }
+
 .contact-form .ff-default .ff-el-form-control::placeholder {
   color: var(--wp--preset--color--primary-900);
 }
@@ -587,6 +594,7 @@ header.stuck {
   border: .0625rem solid var(--wp--preset--color--primary-500);
   background: var(--wp--preset--color--primary-300);
 }
+
 .contact-detail a {
   text-decoration: none;
 }
@@ -612,7 +620,8 @@ form.wpcf7-form .wpcf7-form-control-wrap {
   height: 27.9375rem;
   max-width: 100%;
 }
-.contactus-map{
+
+.contactus-map {
   display: flex;
 }
 
@@ -705,40 +714,47 @@ footer .ff-default .ff-el-form-control {
 
 /********** 404 page **********/
 
-.error-page h1{
-font-size: 200px;
+.error-page h1 {
+  font-size: 200px;
 }
+
 @media (max-width: 901px) {
-  .error-page h1{
+  .error-page h1 {
     font-size: 100px;
-    } 
-}
-@media (max-width: 1080px) {
-.error-page p{
-  font-size: 30px !important;
   }
 }
-.error-page{
+
+@media (max-width: 1080px) {
+  .error-page p {
+    font-size: 30px !important;
+  }
+}
+
+.error-page {
   position: relative;
   height: calc(100vh - 86px);
 }
+
 .error-page-bg {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
 }
+
 @media (max-width: 768px) {
-  .error-page{
-padding-top: 100px !important;
-padding-bottom: 100px !important;
-height: auto;
-}
+  .error-page {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    height: auto;
+  }
+
   .error-page-bg {
     position: relative;
     transform: unset;
   }
-  .error-message{
+
+  .error-message {
     padding-bottom: 50px !important;
   }
 }
