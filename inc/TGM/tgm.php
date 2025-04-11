@@ -20,6 +20,12 @@ function swasthika_register_plugins() {
 			'required'         => false,
 			'force_activation' => false,
 		),
+		array(
+			'name'             => __( 'One Click Demo Import', 'swasthika' ),
+			'slug'             => 'one-click-demo-import',
+			'required'         => false,
+			'force_activation' => false,
+		),
 	);
 
 	$config = array(

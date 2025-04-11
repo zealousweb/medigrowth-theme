@@ -8,9 +8,9 @@
  * @since 1.0
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["swasthika-patterns"],"patternName":"swasthika/inner-banner","name":"Inner Banner"},"align":"full","style":{"spacing":{"padding":{"top":"170px","bottom":"170px"}}},"gradient":"blue-midnight","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["swasthika-fse"],"patternName":"swasthika/inner-banner","name":"Inner Banner"},"align":"full","style":{"spacing":{"padding":{"top":"170px","bottom":"170px"}}},"gradient":"blue-midnight","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-blue-midnight-gradient-background has-background" style="padding-top:170px;padding-bottom:170px"><!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:bcn/breadcrumb-trail /-->
+<div class="wp-block-group"><!-- wp:bcn/breadcrumb-trail {"fontSize":"body-sm"} /-->
 
 <!-- wp:post-title {"level":1} /--></div>
 <!-- /wp:group --></div>

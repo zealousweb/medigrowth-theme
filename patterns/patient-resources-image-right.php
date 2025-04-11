@@ -14,28 +14,28 @@
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}},"spacing":{"margin":{"bottom":"8px"}}},"textColor":"primary-100","fontSize":"large"} -->
-<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-large-font-size" style="margin-bottom:8px">Post-surgery Care</h2>
+<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-large-font-size" style="margin-bottom:8px"><?php echo esc_html__( 'Post-surgery Care', 'swasthika' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-900"}}},"spacing":{"margin":{"bottom":"24px"}}},"textColor":"primary-900","fontSize":"body-xl"} -->
-<p class="has-primary-900-color has-text-color has-link-color has-body-xl-font-size" style="margin-bottom:24px">Lorem ipsum dolor sit amet consectetur. Quis porttitor at leo metus enim proin massa erat eget. Dui pretium viverra tellus semper egestas facilisis sit. Egestas felis.</p>
+<p class="has-primary-900-color has-text-color has-link-color has-body-xl-font-size" style="margin-bottom:24px"><?php echo esc_html__( 'Lorem ipsum dolor sit amet consectetur. Quis porttitor at leo metus enim proin massa erat eget. Dui pretium viverra tellus semper egestas facilisis sit. Egestas felis.', 'swasthika' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"check-list","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-800"}}}},"textColor":"primary-800","fontSize":"body-md"} -->
 <ul class="wp-block-list check-list has-primary-800-color has-text-color has-link-color has-body-md-font-size"><!-- wp:list-item -->
-<li>Lorem ipsum dolor sit amet consectetur. Volutpat eget amet purus hac justo.</li>
+<li><?php echo esc_html__( 'Lorem ipsum dolor sit amet consectetur. Volutpat eget amet purus hac justo.', 'swasthika' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Lorem ipsum dolor sit amet consectetur. Volutpat eget amet purus hac justo.</li>
+<li><?php echo esc_html__( 'Lorem ipsum dolor sit amet consectetur. Volutpat eget amet purus hac justo.', 'swasthika' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Lorem ipsum dolor sit amet consectetur. Volutpat eget amet purus hac justo.</li>
+<li><?php echo esc_html__( 'Lorem ipsum dolor sit amet consectetur. Volutpat eget amet purus hac justo.', 'swasthika' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Lorem ipsum dolor sit amet consectetur. Volutpat eget amet purus hac justo.</li>
+<li><?php echo esc_html__( 'Lorem ipsum dolor sit amet consectetur. Volutpat eget amet purus hac justo.', 'swasthika' ); ?></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></div>
 <!-- /wp:group --></div>
@@ -44,7 +44,7 @@
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":282,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"24px"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://siteproofs.com/projects/zealousweb/free-theme/swasthika/wp-content/uploads/2025/03/patient-resources-image-right.png" alt="patient-resources-image-right" class="wp-image-282" style="border-radius:24px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/patient-resources-image-right.avif'; ?>" alt="<?php echo esc_attr__( 'Patient Resources Image Right', 'swasthika' ); ?>" class="wp-image-282" style="border-radius:24px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>

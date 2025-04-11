@@ -82,37 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 	/* FAQ Accordion Pattern end */
 
-	/* Mobile submenu click event start */
-	// const submenuButtons = document.querySelectorAll(".wp-block-navigation-submenu__toggle");
-	// if (window.matchMedia("(max-width: 991px)").matches) {
-	// 	submenuButtons.forEach((button) => {
-	// 		const parentLi = button.closest(".wp-block-navigation-submenu");
-	// 		const submenu = parentLi.querySelector(".wp-block-navigation__submenu-container");
-	// 		submenu.style.height = "0px";
-	// 		submenu.style.transition = "height 0.35s ease";
-
-	// 		button.addEventListener("click", function (event) {
-	// 			event.preventDefault();
-	// 			const isOpen = parentLi.classList.contains("is-menu-open");
-
-	// 			document.querySelectorAll(".wp-block-navigation-submenu").forEach((submenuParent) => {
-	// 				submenuParent.classList.remove("is-menu-open");
-	// 				const sub = submenuParent.querySelector(".wp-block-navigation__submenu-container");
-	// 				if (sub) sub.style.height = "0px";
-	// 			});
-
-	// 			if (!isOpen) {
-	// 				parentLi.classList.add("is-menu-open");
-	// 				submenu.style.height = submenu.scrollHeight + "px";
-	// 			} else {
-	// 				parentLi.classList.remove("is-menu-open");
-	// 				submenu.style.height = "0px";
-	// 			}
-	// 		});
-	// 	});
-	// }
-	/* Mobile submenu click event end */
-
 	/* Form Focus */
 	document.querySelectorAll(".contact-form .ff-el-input--content input, .contact-form .ff-el-input--content textarea").forEach((element) => {
 		if (element.value.trim()) {
