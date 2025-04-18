@@ -2,28 +2,44 @@
 /**
  * Theme functions and definitions.
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package Swasthika
- * @since 1.0.0
+ * @category WordPress
+ * @package  Swasthika
+ * @author   ZealousWeb <info@zealousweb.com>
+ * @license  GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.html
+ * @link     https://developer.wordpress.org/themes/basics/theme-functions/
+ * @since    1.0.0
  */
 
-if ( ! function_exists( 'swasthika_setup' ) ) {
-	/**
-	 * Theme setup.
-	 *
-	 * @since 1.0.0
-	 * @return void
-	 */
-	function swasthika_setup() {
-		// Add editor styles.
-		add_editor_style( get_template_directory_uri() . '/style.css' );
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-		// Remove core block patterns.
-		remove_theme_support( 'core-block-patterns' );
+/**
+ * Define theme constants.
+ */
+define( 'SWASTHIKA_VERSION', '1.0.0' );
+define( 'SWASTHIKA_THEME_DIR', get_template_directory() );
+define( 'SWASTHIKA_THEME_URI', get_template_directory_uri() );
 
-        add_theme_support( 'ocdi' );
-	}
+/**
+ * Theme setup.
+ *
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * @since 1.0.0
+ * @return void
+ */
+function swasthika_setup() {
+
+	// Add editor styles.
+	add_editor_style( get_template_directory_uri() . '/style.css' );
+
+	// Remove core block patterns.
+	remove_theme_support( 'core-block-patterns' );
+
+	// Add support for One Click Demo Import.
+	add_theme_support( 'ocdi' );
 }
 add_action( 'after_setup_theme', 'swasthika_setup' );
 
@@ -39,15 +55,15 @@ function swasthika_enqueue_assets() {
 		'swasthika-style',
 		get_stylesheet_uri(),
 		array(),
-		wp_get_theme()->get( 'Version' )
+		SWASTHIKA_VERSION
 	);
 
 	// Enqueue custom JavaScript with jQuery dependency.
 	wp_enqueue_script(
 		'swasthika-script',
-		get_template_directory_uri() . '/assets/js/main.js',
+		SWASTHIKA_THEME_URI . '/assets/js/main.js',
 		array( 'jquery' ),
-		'1.0.0',
+		SWASTHIKA_VERSION,
 		true
 	);
 }
@@ -55,61 +71,70 @@ add_action( 'wp_enqueue_scripts', 'swasthika_enqueue_assets' );
 
 /**
  * Include required theme files.
+ *
+ * @since 1.0.0
+ * @return void
  */
+function swasthika_include_files() {
+	// Include TGM Plugin Activation.
+	require_once SWASTHIKA_THEME_DIR . '/inc/TGM/tgm.php';
 
-// Include TGM Plugin Activation.
-require get_template_directory() . '/inc/TGM/tgm.php';
+	// Include custom block patterns.
+	require_once SWASTHIKA_THEME_DIR . '/inc/block-patterns.php';
+}
+add_action( 'after_setup_theme', 'swasthika_include_files' );
 
-// Include custom block patterns.
-require get_template_directory() . '/inc/block-patterns.php';
 /**
  * Define import files for One Click Demo Import.
+ *
+ * @since 1.0.0
+ * @return array Array of import files configuration.
  */
-function mytheme_import_files() {
-    return [
-        [
-            'import_file_name'           => 'Swasthika Demo Import',
-            'local_import_file'          => get_template_directory() . '/inc/demo-import/content.xml',
-            // 'local_import_widget_file'   => get_template_directory() . '/inc/demo-import/widgets.wie',
-            // 'local_import_customizer_file' => get_template_directory() . '/inc/demo-import/customizer.dat',
-            // 'import_preview_image_url' => 'https://yourdomain.com/demo-preview.jpg',
-            // 'preview_url'                => home_url(), // Dynamically gets the current site URL
-        ]
-    ];
+function swasthika_import_files() {
+	return array(
+		array(
+			'import_file_name'           => 'Swasthika Demo Import',
+			'local_import_file'          => SWASTHIKA_THEME_DIR . '/inc/demo-import/content.xml',
+		),
+	);
 }
-add_filter( 'ocdi/import_files', 'mytheme_import_files' );
+add_filter( 'ocdi/import_files', 'swasthika_import_files' );
 
 /**
  * After demo import, replace old URLs with the current site URL in database.
+ *
+ * @since 1.0.0
+ * @return void
  */
-function zealousweb_replace_demo_urls() {
-    global $wpdb;
+function swasthika_replace_demo_urls() {
+	global $wpdb;
 
-    $old_url = 'https://demo.zealousweb.com/wordpress-themes/swasthika'; // Change this to match the old site used in demo data
-    $new_url = home_url(); // Current site URL
+	$old_url = 'http://swasthika.localhost'; // Replace with your old URL.
+	$new_url = home_url(); // Get the current site URL.
 
-    // Escape both URLs to avoid issues
-    $old_url = esc_url_raw( $old_url );
-    $new_url = esc_url_raw( $new_url );
+	// Escape both URLs to avoid issues.
+	$old_url = esc_url_raw( $old_url );
+	$new_url = esc_url_raw( $new_url );
 
-    // Replace old URL with new URL in post content
-    $posts = $wpdb->get_results( "SELECT ID, post_content FROM {$wpdb->posts}" );
+	// Replace old URL with new URL in post content.
+	$posts = $wpdb->get_results( "SELECT ID, post_content FROM {$wpdb->posts}" );
 
-    foreach ( $posts as $post ) {
-        if ( strpos( $post->post_content, $old_url ) !== false ) {
-            $updated_content = str_replace( $old_url, $new_url, $post->post_content );
+	if ( ! empty( $posts ) ) {
+		foreach ( $posts as $post ) {
+			if ( strpos( $post->post_content, $old_url ) !== false ) {
+				$updated_content = str_replace( $old_url, $new_url, $post->post_content );
+				$wpdb->update(
+					$wpdb->posts,
+					array( 'post_content' => $updated_content ),
+					array( 'ID' => $post->ID ),
+					array( '%s' ),
+					array( '%d' )
+				);
+			}
+		}
+	}
 
-            $wpdb->update(
-                $wpdb->posts,
-                [ 'post_content' => wp_kses_post( $updated_content ) ],
-                [ 'ID' => $post->ID ],
-                [ '%s' ],
-                [ '%d' ]
-            );
-        }
-    }
-
-    // Replace URLs in post meta
+	// Replace URLs in post meta
     $wpdb->query( $wpdb->prepare(
         "UPDATE {$wpdb->postmeta} SET meta_value = REPLACE(meta_value, %s, %s)",
         $old_url, $new_url
@@ -121,4 +146,16 @@ function zealousweb_replace_demo_urls() {
         $old_url, $new_url
     ) );
 }
-add_action( 'ocdi/after_import', 'zealousweb_replace_demo_urls' );
+add_action( 'ocdi/after_import', 'swasthika_replace_demo_urls' );
+
+/**
+ * Add custom image sizes.
+ *
+ * @since 1.0.0
+ * @return void
+ */
+function swasthika_image_sizes() {
+	add_image_size( 'swasthika-featured', 1200, 600, true );
+	add_image_size( 'swasthika-thumbnail', 400, 300, true );
+}
+add_action( 'after_setup_theme', 'swasthika_image_sizes' );
