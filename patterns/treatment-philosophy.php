@@ -13,42 +13,42 @@
 <div class="wp-block-group"><!-- wp:columns {"verticalAlignment":"center"} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"id":91,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"24px"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/treatment-philosophy.avif'; ?>" alt="<?php echo esc_attr__( 'Treatment Philosophy', 'swasthika' ); ?>" class="wp-image-91" style="border-radius:24px"/></figure>
+<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/treatment-philosophy.avif'; ?>" alt="<?php echo esc_attr_e( 'Treatment Philosophy', 'swasthika' ); ?>" class="wp-image-91" style="border-radius:24px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}},"spacing":{"margin":{"bottom":"16px","right":"0"}}},"textColor":"primary-100","fontSize":"large"} -->
-<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-large-font-size" style="margin-right:0;margin-bottom:16px"><?php echo esc_html__( 'Treatment Philosophy', 'swasthika' ); ?></h2>
+<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-large-font-size" style="margin-right:0;margin-bottom:16px"><?php echo esc_html_e( 'Treatment Philosophy', 'swasthika' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"24px"}},"elements":{"link":{"color":{"text":"var:preset|color|primary-900"}}}},"textColor":"primary-900","fontSize":"body-xl"} -->
-<p class="has-primary-900-color has-text-color has-link-color has-body-xl-font-size" style="margin-bottom:24px"><?php echo esc_html__( 'Lorem ipsum dolor sit amet consectetur. Massa sed sit eget tempor tristique non. Cum tristique enim non maecenas pellentesque lacus donec eget dolor. Volutpat faucibus et.', 'swasthika' ); ?>Lorem ipsum dolor sit amet consectetur. Massa sed sit eget tempor tristique non. Cum tristique enim non maecenas pellentesque lacus donec eget dolor. Volutpat faucibus et.</p>
+<p class="has-primary-900-color has-text-color has-link-color has-body-xl-font-size" style="margin-bottom:24px"><?php echo esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Massa sed sit eget tempor tristique non. Cum tristique enim non maecenas pellentesque lacus donec eget dolor. Volutpat faucibus et.', 'swasthika' ); ?>Lorem ipsum dolor sit amet consectetur. Massa sed sit eget tempor tristique non. Cum tristique enim non maecenas pellentesque lacus donec eget dolor. Volutpat faucibus et.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"check-list","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-800"}}}},"textColor":"primary-800","fontSize":"body-md"} -->
 <ul class="wp-block-list check-list has-primary-800-color has-text-color has-link-color has-body-md-font-size"><!-- wp:list-item {"style":{"spacing":{"margin":{"top":"0","bottom":"10px"}}}} -->
-<li style="margin-top:0;margin-bottom:10px"><?php echo esc_html__( 'We believe in a patient-centered approach, ensuring personalized care tailored to individual health needs.', 'swasthika' ); ?></li>
+<li style="margin-top:0;margin-bottom:10px"><?php echo esc_html_e( 'We believe in a patient-centered approach, ensuring personalized care tailored to individual health needs.', 'swasthika' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"spacing":{"margin":{"bottom":"10px"}}}} -->
-<li style="margin-bottom:10px"><?php echo esc_html__( 'Our focus is on holistic healing, combining modern medical advancements with a compassionate touch.', 'swasthika' ); ?></li>
+<li style="margin-bottom:10px"><?php echo esc_html_e( 'Our focus is on holistic healing, combining modern medical advancements with a compassionate touch.', 'swasthika' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"spacing":{"margin":{"bottom":"10px"}}}} -->
-<li style="margin-bottom:10px"><?php echo esc_html__( 'We emphasize preventive care, helping patients maintain long-term wellness and avoid future health issues.', 'swasthika' ); ?></li>
+<li style="margin-bottom:10px"><?php echo esc_html_e( 'We emphasize preventive care, helping patients maintain long-term wellness and avoid future health issues.', 'swasthika' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"spacing":{"margin":{"bottom":"10px"}}}} -->
-<li style="margin-bottom:10px"><?php echo esc_html__( 'Ethical medical practices and transparency guide our treatments, fostering trust and confidence.', 'swasthika' ); ?></li>
+<li style="margin-bottom:10px"><?php echo esc_html_e( 'Ethical medical practices and transparency guide our treatments, fostering trust and confidence.', 'swasthika' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item {"style":{"spacing":{"margin":{"bottom":"10px"}}}} -->
-<li style="margin-bottom:10px"><?php echo esc_html__( 'We prioritize clear communication, ensuring patients understand their health conditions and treatment options.', 'swasthika' ); ?></li>
+<li style="margin-bottom:10px"><?php echo esc_html_e( 'We prioritize clear communication, ensuring patients understand their health conditions and treatment options.', 'swasthika' ); ?></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><?php echo esc_html__( 'Our commitment is to continuous learning and innovation, bringing the best healthcare solutions to our patients.', 'swasthika' ); ?></li>
+<li><?php echo esc_html_e( 'Our commitment is to continuous learning and innovation, bringing the best healthcare solutions to our patients.', 'swasthika' ); ?></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></div>
 <!-- /wp:column --></div>

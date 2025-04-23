@@ -10,7 +10,7 @@
 <div class="wp-block-columns are-vertically-aligned-center is-not-stacked-on-mobile" style="padding-top:16px;padding-bottom:16px"><!-- wp:column {"verticalAlignment":"center","width":"30%","layout":{"type":"default"}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:30%"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"lightbox":{"enabled":false},"width":"220px","sizeSlug":"full","linkDestination":"custom","className":"site-logo"} -->
-<figure class="wp-block-image size-full is-resized site-logo"><a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/header-logo.avif'; ?>" alt="<?php echo esc_attr__( 'Header Logo', 'swasthika' ); ?>" style="width:220px" /></a></figure>
+<figure class="wp-block-image size-full is-resized site-logo"><a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/header-logo.avif'; ?>" alt="<?php echo esc_attr_e( 'Header Logo', 'swasthika' ); ?>" style="width:220px" /></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->

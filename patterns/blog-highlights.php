@@ -14,11 +14,11 @@
 <div class="wp-block-columns blog-highlight-cta" style="margin-bottom:48px"><!-- wp:column {"verticalAlignment":"bottom","width":"60%"} -->
 <div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:60%"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"style":{"spacing":{"margin":{"bottom":"16px"}}},"fontSize":"large"} -->
-<h2 class="wp-block-heading has-large-font-size" style="margin-bottom:16px"><?php echo esc_html__( 'Blogs', 'swasthika' ); ?></h2>
+<h2 class="wp-block-heading has-large-font-size" style="margin-bottom:16px"><?php echo esc_html_e( 'Blogs', 'swasthika' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-900"}}}},"textColor":"primary-900","fontSize":"body-xl"} -->
-<p class="has-primary-900-color has-text-color has-link-color has-body-xl-font-size"><?php echo esc_html__( 'Lorem ipsum dolor sit amet consectetur. Semper odio turpis rhoncus luctus. Libero nunc sed.', 'swasthika' ); ?></p>
+<p class="has-primary-900-color has-text-color has-link-color has-body-xl-font-size"><?php echo esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Semper odio turpis rhoncus luctus. Libero nunc sed.', 'swasthika' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
@@ -27,7 +27,7 @@
 <div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:40%"><!-- wp:group {"layout":{"type":"constrained","justifyContent":"right"}} -->
 <div class="wp-block-group"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right","verticalAlignment":"bottom"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-shadow"} -->
-<div class="wp-block-button is-style-shadow"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'View All Blogs', 'swasthika' ); ?></a></div>
+<div class="wp-block-button is-style-shadow"><a class="wp-block-button__link wp-element-button"><?php echo esc_html_e( 'View All Blogs', 'swasthika' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

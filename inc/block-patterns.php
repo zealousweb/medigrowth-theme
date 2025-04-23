@@ -1,36 +1,35 @@
 <?php
 /**
- * Block Pattern Registration
+ * Register custom block pattern categories for the Swasthika theme.
  *
- * @package Swasthika
- * @since 1.0.0
- */
-
-/**
- * Registers block pattern categories.
+ * This function checks for the required function and class availability before
+ * registering custom block pattern categories. Categories help organize custom
+ * block patterns under the "Patterns" section of the block editor.
  *
- * Categories are registered using the `register_block_pattern_category` function, and
- * are used to group block patterns in the Inserter.
- *
- * @since 1.0.0
+ * @since 1.0
  * @return void
  */
 function swasthika_register_block_patterns() {
-	// Check if function exists to prevent errors in older versions.
+
+	// Check if the function exists (introduced in WordPress 5.5+).
 	if ( function_exists( 'register_block_pattern_category' ) ) {
-		// Define block pattern categories.
+
+		// Define custom block pattern categories.
 		$swasthika_block_pattern_categories = array(
 			'swasthika-fse' => array(
-				'label' => esc_html__( 'Swasthika FSE', 'swasthika' ),
+				'label' => esc_html__( 'Swasthika', 'swasthika' ),
 			),
 		);
 
-		// Allow external modification of block pattern categories.
+		// Allow other plugins/themes to modify the pattern categories via filter.
 		$swasthika_block_pattern_categories = apply_filters( 'swasthika_block_pattern_categories', $swasthika_block_pattern_categories );
 
 		// Register each category if not already registered.
 		foreach ( $swasthika_block_pattern_categories as $name => $properties ) {
-			if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
+			if (
+				class_exists( 'WP_Block_Pattern_Categories_Registry' ) &&
+				! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name )
+			) {
 				register_block_pattern_category( $name, $properties );
 			}
 		}
