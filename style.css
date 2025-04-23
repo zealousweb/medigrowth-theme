@@ -3,18 +3,20 @@ Theme Name: Swasthika
 Theme URI: https://www.zealousweb.com/
 Author: ZealousWeb
 Author URI: https://www.zealousweb.com/
-Description: Swasthika FSE is a Full Site Editing Block Theme for WordPress.
+Description: Swasthika is a modern Full Site Editing (FSE) WordPress theme designed for the healthcare industry—ideal for clinics, hospitals, wellness centers, and practitioners. It includes pre-built block patterns and templates like Hero Banners, Blog Listings, and customizable Header/Footer layouts—all editable via the WordPress Site Editor, no coding needed. Seamlessly integrates with Fluent Forms for appointment bookings and contact forms. Built with theme.json and block templates, it ensures fast performance, accessibility, and design consistency.
 Requires at least: 6.1
-Tested up to: 6.4
-Requires PHP: 7.2
+Tested up to: 6.8
+Requires PHP: 7.4
 Version: 1.0
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: swasthika
 Tags: full-site-editing, block-patterns
 */
 
-/* Styles intended only for the front.*/
+/*=====================================
+Styles intended only for the front.
+========================================*/
 html {
   scroll-behavior: smooth;
 }
@@ -30,9 +32,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/********** Typography **********/
-
-/* List style */
+/*=====================================
+Typography
+========================================*/
+/*=====================================
+List style
+========================================*/
 
 ul.check-list li,
 .single-post .entry-content ul li {
@@ -65,7 +70,9 @@ ul.check-list li::before,
   }
 }
 
-/* Button Shadow */
+/*=====================================
+Button Shadow
+========================================*/
 
 .is-style-shadow a {
   display: inline-flex;
@@ -113,7 +120,9 @@ footer form button:hover {
   outline: 0.125rem solid var(--wp--preset--color--accent);
 }
 
-/* Button Fill */
+/*=====================================
+Button Fill
+========================================*/
 .is-style-fill a {
   background-color: var(--wp--preset--color--contrast);
   color: var(--wp--preset--color--base) !important;
@@ -145,7 +154,9 @@ footer form button:hover {
   color: var(--wp--preset--color--contrast);
 }
 
-/* Padding and Margin default in mobile */
+/*=====================================
+Padding and Margin default in mobile
+========================================*/
 
 @media screen and (max-width: 61.9375rem) {
   .padding-large {
@@ -171,8 +182,9 @@ footer form button:hover {
   }
 }
 
-/********** Header **********/
-
+/*=====================================
+Header
+========================================*/
 .site-header .wp-block-navigation .has-child .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
   padding: 0.75rem 1rem;
 }
@@ -221,8 +233,9 @@ header.stuck {
   left: -1.25rem;
   right: 0;
 }
-/* search button */
-
+/*=====================================
+search button
+========================================*/
 .site-header .wp-block-search button.wp-block-search__button {
   padding: 0.25rem;
   max-width: 100% !important;
@@ -383,9 +396,12 @@ header.stuck {
   }
 }
 
-/********** Home Page **********/
-
-/* Hero Banner */
+/*=====================================
+Home Page
+========================================*/
+/*=====================================
+Hero Banner
+========================================*/
 
 .hero-banner {
   display: flex;
@@ -432,8 +448,9 @@ header.stuck {
     flex-grow: 1;
   }
 }
-
-/* Our Services */
+/*=====================================
+Our Services
+========================================*/
 .our-services {
   position: relative;
   z-index: 1;
@@ -455,8 +472,9 @@ header.stuck {
     justify-content: flex-start;
   }
 }
-
-/* Patient Reviews */
+/*=====================================
+Patient Reviews
+========================================*/
 @media (max-width: 48.8125rem) {
   .patient-reviews .wp-block-buttons.is-content-justification-right {
     justify-content: flex-start;
@@ -475,8 +493,9 @@ header.stuck {
   background-color: var(--wp--preset--color--primary-200) !important;
 }
 
-/* Blog Hightlight */
-
+/*=====================================
+Blog Hightlight
+========================================*/
 .wp-block-read-more {
   position: relative;
   padding-right: 1.875rem;
@@ -540,11 +559,12 @@ header.stuck {
 .blog-card>.wp-block-group>.wp-block-group{
   width: 100%;
 }
-
-
-/********** About Page **********/
-
-/* Clinic Hours & Availability */
+/*=====================================
+About Page
+========================================*/
+/*=====================================
+Clinic Hours & Availability
+========================================*/
 .about-map iframe {
   height: 100%;
   width: 100%;
@@ -556,9 +576,12 @@ header.stuck {
   z-index: 1;
 }
 
-/********** Service Page **********/
-
-/* Three-col-service */
+/*=====================================
+Service Page
+========================================*/
+/*=====================================
+Three-col-service
+========================================*/
 .three-col-service .wp-block-column {
   position: relative;
 }
@@ -592,8 +615,9 @@ header.stuck {
   }
 }
 
-/* FAQ pattern*/
-
+/*=====================================
+FAQ pattern
+========================================*/
 .wp-block-details summary {
   position: relative;
   padding-right: 0.9375rem;
@@ -639,8 +663,9 @@ header.stuck {
   color: var(--wp--preset--color--base);
 }
 
-/********** Contact Page **********/
-
+/*=====================================
+Contact Page
+========================================*/
 .contact-form {
   background-color:  var(--wp--preset--color--custom-primary-gallery);
   padding: 3rem;
@@ -743,15 +768,17 @@ form.wpcf7-form .wpcf7-form-control-wrap {
   display: flex;
 }
 
-/********** Page not found **********/
-
+/*=====================================
+Page not found
+========================================*/
 .wp-block-search button.wp-block-search__button {
   padding: 0.5rem 1.25rem;
   font-size: 1.125rem !important;
 }
 
-/********** Single blog page **********/
-
+/*=====================================
+Single blog page
+========================================*/
 .comment-respond .wp-block-post-comments-form :where(input[type="submit"]) {
   border: none;
 }
@@ -760,8 +787,9 @@ form.wpcf7-form .wpcf7-form-control-wrap {
   font-size: 1.25rem;
 }
 
-/********** Blog Detail Page **********/
-
+/*=====================================
+Blog Detail Page
+========================================*/
 .single-post .entry-content {
   max-width: 66.25rem;
   margin: 0 auto;
@@ -787,8 +815,9 @@ form.wpcf7-form .wpcf7-form-control-wrap {
   }
 }
 
-/********** 404 page **********/
-
+/*=====================================
+404 page
+========================================*/
 .error-page h1 {
   font-size: 12.5rem;
 }
@@ -834,8 +863,9 @@ form.wpcf7-form .wpcf7-form-control-wrap {
   }
 }
 
-/********** Blog Pagination **********/
-
+/*=====================================
+Blog Pagination
+========================================*/
 .blog-pagination.wp-block-query-pagination {
   margin-top: 3rem;
 }
@@ -881,8 +911,9 @@ select {
   background-repeat: no-repeat !important;
 }
 
-/********** Search Page **********/
-
+/*=====================================
+Search Page
+========================================*/
 .search-page button:hover {
   background-color: var(--wp--preset--color--contrast) !important;
 }
@@ -904,8 +935,9 @@ select {
   padding-left: 1rem;
 }
 
-/********** Footer **********/
-
+/*=====================================
+Footer
+========================================*/
 footer .wp-block-navigation__responsive-container-open,
 footer .wp-block-navigation__responsive-container-close {
   display: none;
@@ -924,8 +956,9 @@ footer .wp-block-navigation__responsive-container {
   }
 }
 
-/* Newsletter form */
-
+/*=====================================
+Newsletter form
+========================================*/
 footer form.fluent_form_2 .wpf_has_custom_css.ff-btn-submit {
   border-color: transparent;
   background-color: var(--wp--preset--color--contrast);
@@ -1001,8 +1034,9 @@ footer .ff-default .ff-el-form-control:focus {
   color: var(--wp--preset--color--custom-primary-gallery);
   outline: none;
 }
-
-/********** Fluent form **********/
+/*=====================================
+Fluent form
+========================================*/
 .ff-el-input--content {
   position: relative;
 }

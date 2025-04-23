@@ -6,7 +6,7 @@
  * Block Types: core/post-conent, core/query, core/post-title
  *
  * @package swasthika
- * @since 1.0.0
+ * @since 1.0
  */
 ?>
 <!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
@@ -15,7 +15,7 @@
 <div class="wp-block-group"><!-- wp:bcn/breadcrumb-trail /-->
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading"><?php echo esc_html__( 'Blog', 'swasthika' ); ?></h1>
+<h1 class="wp-block-heading"><?php echo esc_html_e( 'Blog', 'swasthika' ); ?></h1>
 <!-- /wp:heading --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></main>
@@ -51,7 +51,7 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when a query returns no results.","fontSize":"body-xl"} -->
-<p class="has-text-align-center has-body-xl-font-size"><?php echo esc_html__( 'No results found', 'swasthika' ); ?></p>
+<p class="has-text-align-center has-body-xl-font-size"><?php echo esc_html_e( 'No results found', 'swasthika' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></div>
