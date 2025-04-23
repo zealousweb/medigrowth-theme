@@ -15,6 +15,10 @@ Swasthika is a modern Full Site Editing (FSE) WordPress theme tailored for the h
 
 Swasthika integrates with Fluent Forms for simple Appointment Booking, Contact, and Newsletter forms. Built with `theme.json` and block-based templates, it delivers performance, accessibility, and a consistent visual identity—helping healthcare professionals engage patients with ease.
 
+== Appointment Booking Form Demo ==
+
+Demo Form JSON - https://github.com/zealousweb/swasthika/blob/master/booking-appointment.json
+
 == Folder Structure ==
 
 `/assets/` – Images and CSS files
