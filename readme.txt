@@ -104,8 +104,6 @@ Free public domain CC0 image.
 patient-resources-image-left.avif
 https://www.rawpixel.com/image/17299290/compassionate-hospital-care-scene
 
-
-
 === Fonts ===
 
 Manrope Font
