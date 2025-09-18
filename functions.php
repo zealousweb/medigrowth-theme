@@ -70,5 +70,5 @@ function swasthika_register_block_pattern_categories() {
 add_action( 'init', 'swasthika_register_block_pattern_categories' );
 
 // Include necessary files.
-require_once SWASTHIKA_THEME_DIR . '/inc/TGM/tgm.php';
+require_once SWASTHIKA_THEME_DIR . '/inc/swasthika-plugins/swasthika-plugins.php';
 require_once SWASTHIKA_THEME_DIR . '/inc/block-patterns.php';
