@@ -1,21 +1,21 @@
 <?php
 /**
  * Title: Blog Posts
- * Slug: swasthika/blog-posts
- * Categories: swasthika-fse
+ * Slug: medigrowth/blog-posts
+ * Categories: medigrowth-fse
  * Block Types: core/post-conent, core/query, core/post-title
  *
- * @package swasthika
+ * @package medigrowth
  * @since 1.0
  */
 ?>
 <!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0"><!-- wp:group {"metadata":{"categories":["swasthika-fse"],"patternName":"swasthika/inner-banner","name":"Inner Banner"},"align":"full","style":{"spacing":{"padding":{"top":"170px","bottom":"170px"}}},"gradient":"blue-midnight","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0"><!-- wp:group {"metadata":{"categories":["medigrowth-fse"],"patternName":"medigrowth/inner-banner","name":"Inner Banner"},"align":"full","style":{"spacing":{"padding":{"top":"170px","bottom":"170px"}}},"gradient":"blue-midnight","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-blue-midnight-gradient-background has-background" style="padding-top:170px;padding-bottom:170px"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:bcn/breadcrumb-trail /-->
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading"><?php echo esc_html_e( 'Blog', 'swasthika' ); ?></h1>
+<h1 class="wp-block-heading"><?php echo esc_html_e( 'Blog', 'medigrowth' ); ?></h1>
 <!-- /wp:heading --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></main>
@@ -51,7 +51,7 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when a query returns no results.","fontSize":"body-xl"} -->
-<p class="has-text-align-center has-body-xl-font-size"><?php echo esc_html_e( 'No results found', 'swasthika' ); ?></p>
+<p class="has-text-align-center has-body-xl-font-size"><?php echo esc_html_e( 'No results found', 'medigrowth' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></div>

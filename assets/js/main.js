@@ -1,5 +1,5 @@
 /**
- * Swasthika Theme JavaScript
+ * medigrowth Theme JavaScript
  * Main JavaScript file for handling theme functionality
  */
 
