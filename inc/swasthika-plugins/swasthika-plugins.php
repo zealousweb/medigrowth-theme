@@ -1,6 +1,6 @@
 <?php
 /**
- * This file represents an example of the code that themes would use to register
+ * This file represents an swasthika of the code that themes would use to register
  * the required plugins.
  *
  * It is expected that theme authors would copy and paste this code into their
@@ -9,7 +9,7 @@
  * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.
  *
  * @package    TGM-Plugin-Activation
- * @subpackage Example
+ * @subpackage Swasthika
  * @version    2.6.1 for parent theme Swasthika for publication on WordPress.org
  * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright  Copyright (c) 2011, Thomas Griffin
@@ -22,16 +22,8 @@
  *
  * Depending on your implementation, you may want to change the include call:
  *
- * Parent Theme:
- * require_once get_template_directory() . '/path/to/class-tgm-plugin-activation.php';
- *
- * Child Theme:
- * require_once get_stylesheet_directory() . '/path/to/class-tgm-plugin-activation.php';
- *
- * Plugin:
- * require_once dirname( __FILE__ ) . '/path/to/class-tgm-plugin-activation.php';
  */
-require_once get_template_directory() . '/inc/TGM/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/swasthika-plugins/class-swasthika-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'swasthika_register_required_plugins' );
 
@@ -61,12 +53,12 @@ function swasthika_register_required_plugins() {
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'      => 'Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder',
+			'name'      => __( 'Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder', 'swasthika' ),
 			'slug'      => 'fluentform',
 			'required'  => false,
 		),
 		array(
-			'name'      => 'Breadcrumb NavXT',
+			'name'      => __( 'Breadcrumb NavXT', 'swasthika' ),
 			'slug'      => 'breadcrumb-navxt',
 			'required'  => false,
 		),

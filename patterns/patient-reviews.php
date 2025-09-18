@@ -46,7 +46,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"","layout":{"type":"default"}} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}},"spacing":{"padding":{"left":"16px"}}},"textColor":"primary-100","fontSize":"body-xl"} -->
-<p class="has-primary-100-color has-text-color has-link-color has-body-xl-font-size" style="padding-left:16px">~John</p>
+<p class="has-primary-100-color has-text-color has-link-color has-body-xl-font-size" style="padding-left:16px"><?php echo esc_html_e( '~John', 'swasthika' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -68,7 +68,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":""} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}},"spacing":{"padding":{"left":"16px"}}},"textColor":"primary-100","fontSize":"body-xl"} -->
-<p class="has-primary-100-color has-text-color has-link-color has-body-xl-font-size" style="padding-left:16px">~John</p>
+<p class="has-primary-100-color has-text-color has-link-color has-body-xl-font-size" style="padding-left:16px"><?php echo esc_html_e( '~John', 'swasthika' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -90,7 +90,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":""} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}},"spacing":{"padding":{"left":"16px"}}},"textColor":"primary-100","fontSize":"body-xl"} -->
-<p class="has-primary-100-color has-text-color has-link-color has-body-xl-font-size" style="padding-left:16px">~John</p>
+<p class="has-primary-100-color has-text-color has-link-color has-body-xl-font-size" style="padding-left:16px"><?php echo esc_html_e( '~John', 'swasthika' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

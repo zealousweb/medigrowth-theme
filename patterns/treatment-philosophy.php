@@ -23,7 +23,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"24px"}},"elements":{"link":{"color":{"text":"var:preset|color|primary-900"}}}},"textColor":"primary-900","fontSize":"body-xl"} -->
-<p class="has-primary-900-color has-text-color has-link-color has-body-xl-font-size" style="margin-bottom:24px"><?php echo esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Massa sed sit eget tempor tristique non. Cum tristique enim non maecenas pellentesque lacus donec eget dolor. Volutpat faucibus et.', 'swasthika' ); ?>Lorem ipsum dolor sit amet consectetur. Massa sed sit eget tempor tristique non. Cum tristique enim non maecenas pellentesque lacus donec eget dolor. Volutpat faucibus et.</p>
+<p class="has-primary-900-color has-text-color has-link-color has-body-xl-font-size" style="margin-bottom:24px"><?php echo esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Massa sed sit eget tempor tristique non. Cum tristique enim non maecenas pellentesque lacus donec eget dolor. Volutpat faucibus et.', 'swasthika' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"check-list","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-800"}}}},"textColor":"primary-800","fontSize":"body-md"} -->
