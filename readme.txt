@@ -1,4 +1,4 @@
-=== medigrowth ===
+=== MediGrowth ===
 Contributors: ZealousWeb
 Requires at least: 6.1
 Tested up to: 6.8
@@ -11,9 +11,9 @@ Tags: full-site-editing, block-patterns
 
 == Description ==
 
-medigrowth is a modern Full Site Editing (FSE) WordPress theme tailored for the healthcare industry—ideal for clinics, hospitals, wellness centers, and practitioners. It features a clean, flexible foundation with pre-built block patterns and templates, including Hero Banners, Blog Listings, and customizable Header/Footer layouts—all editable with the WordPress Site Editor, no coding needed.
+MediGrowth is a modern Full Site Editing (FSE) WordPress theme tailored for the healthcare industry—ideal for clinics, hospitals, wellness centers, and practitioners. It features a clean, flexible foundation with pre-built block patterns and templates, including Hero Banners, Blog Listings, and customizable Header/Footer layouts—all editable with the WordPress Site Editor, no coding needed.
 
-medigrowth integrates with Fluent Forms for simple Appointment Booking, Contact, and Newsletter forms. Built with `theme.json` and block-based templates, it delivers performance, accessibility, and a consistent visual identity—helping healthcare professionals engage patients with ease.
+MediGrowth integrates with Fluent Forms for simple Appointment Booking, Contact, and Newsletter forms. Built with `theme.json` and block-based templates, it delivers performance, accessibility, and a consistent visual identity—helping healthcare professionals engage patients with ease.
 
 == Appointment Booking Form Demo ==
 
@@ -43,9 +43,9 @@ Files:
 Initial release
 
 == Copyright ==
-medigrowth WordPress Theme
+MediGrowth WordPress Theme
 Copyright © 2025 ZealousWeb
-medigrowth is distributed under the terms of the GNU General Public License v2 or later.
+MediGrowth is distributed under the terms of the GNU General Public License v2 or later.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License or (at your option) any later version.
 
