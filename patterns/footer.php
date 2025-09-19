@@ -8,7 +8,7 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"50px","bottom":"50px"}},"position":{"type":""}},"backgroundColor":"primary-800","layout":{"type":"constrained","wideSize":"840px"}} -->
 <div class="wp-block-group has-primary-800-background-color has-background" style="padding-top:50px;padding-bottom:50px"><!-- wp:group {"style":{"border":{"bottom":{"width":"1px"}},"spacing":{"blockGap":"0","padding":{"bottom":"var:preset|spacing|40","top":"30px"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="border-bottom-width:1px;padding-top:30px;padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"full","linkDestination":"custom","align":"center"} -->
-<figure class="wp-block-image aligncenter size-full"><a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/footer-logo.avif'; ?>" alt="<?php echo esc_attr_e( 'Footer Logo', 'medigrowth' ); ?>" /></a></figure>
+<figure class="wp-block-image aligncenter size-full"><a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/footer-logo.svg'; ?>" alt="<?php echo esc_attr_e( 'Footer Logo', 'medigrowth' ); ?>" /></a></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":6,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"textColor":"base"} -->
