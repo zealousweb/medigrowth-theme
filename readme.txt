@@ -17,7 +17,7 @@ MediGrowth integrates with Fluent Forms for simple Appointment Booking, Contact,
 
 == Appointment Booking Form Demo ==
 
-Demo Form JSON - https://github.com/zealousweb/medigrowth/blob/master/booking-appointment.json
+Demo Form JSON - https://github.com/zealousweb/medigrowth-theme/blob/master/booking-appointment.json
 
 == Folder Structure ==
 
