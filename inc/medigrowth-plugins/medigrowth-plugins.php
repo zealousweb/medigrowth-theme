@@ -1,6 +1,6 @@
 <?php
 /**
- * This file represents an swasthika of the code that themes would use to register
+ * This file represents an medigrowth of the code that themes would use to register
  * the required plugins.
  *
  * It is expected that theme authors would copy and paste this code into their
@@ -9,8 +9,8 @@
  * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.
  *
  * @package    TGM-Plugin-Activation
- * @subpackage Swasthika
- * @version    2.6.1 for parent theme Swasthika for publication on WordPress.org
+ * @subpackage medigrowth
+ * @version    2.6.1 for parent theme medigrowth for publication on WordPress.org
  * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
@@ -23,9 +23,9 @@
  * Depending on your implementation, you may want to change the include call:
  *
  */
-require_once get_template_directory() . '/inc/swasthika-plugins/class-swasthika-plugin-activation.php';
+require_once get_template_directory() . '/inc/medigrowth-plugins/class-medigrowth-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'swasthika_register_required_plugins' );
+add_action( 'tgmpa_register', 'medigrowth_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -44,7 +44,7 @@ add_action( 'tgmpa_register', 'swasthika_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function swasthika_register_required_plugins() {
+function medigrowth_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
@@ -53,12 +53,12 @@ function swasthika_register_required_plugins() {
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'      => __( 'Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder', 'swasthika' ),
+			'name'      => __( 'Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder', 'medigrowth' ),
 			'slug'      => 'fluentform',
 			'required'  => false,
 		),
 		array(
-			'name'      => __( 'Breadcrumb NavXT', 'swasthika' ),
+			'name'      => __( 'Breadcrumb NavXT', 'medigrowth' ),
 			'slug'      => 'breadcrumb-navxt',
 			'required'  => false,
 		),
@@ -75,7 +75,7 @@ function swasthika_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'swasthika',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'medigrowth',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.

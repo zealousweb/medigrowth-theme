@@ -3,7 +3,7 @@
  * Theme functions and definitions.
  *
  * @category WordPress
- * @package  Swasthika
+ * @package  medigrowth
  * @author   ZealousWeb <hello@zealousweb.com>
  * @license  GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.html
  * @link     https://developer.wordpress.org/themes/basics/theme-functions/
@@ -17,14 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define theme constants.
  */
-define( 'SWASTHIKA_VERSION', '1.0' );
-define( 'SWASTHIKA_THEME_DIR', get_template_directory() );
-define( 'SWASTHIKA_THEME_URI', get_template_directory_uri() );
+define( 'medigrowth_VERSION', '1.0' );
+define( 'medigrowth_THEME_DIR', get_template_directory() );
+define( 'medigrowth_THEME_URI', get_template_directory_uri() );
 
 /**
  * Theme setup.
  */
-function swasthika_setup() {
+function medigrowth_setup() {
 	// Add support for block styles and full site editing.
 	add_theme_support( 'block-styles' );
 	add_theme_support( 'editor-styles' );
@@ -33,42 +33,42 @@ function swasthika_setup() {
 	// Support for wide and full align images.
 	add_theme_support( 'align-wide' );
 }
-add_action( 'after_setup_theme', 'swasthika_setup' );
+add_action( 'after_setup_theme', 'medigrowth_setup' );
 
 /**
  * Enqueue styles and scripts.
  */
-function swasthika_enqueue_assets() {
+function medigrowth_enqueue_assets() {
 	wp_enqueue_style(
-		'swasthika-style',
+		'medigrowth-style',
 		get_stylesheet_uri(),
 		array(),
-		SWASTHIKA_VERSION
+		medigrowth_VERSION
 	);
 
 	wp_enqueue_script(
-		'swasthika-script',
-		SWASTHIKA_THEME_URI . '/assets/js/main.js',
+		'medigrowth-script',
+		medigrowth_THEME_URI . '/assets/js/main.js',
 		array( 'jquery' ),
-		SWASTHIKA_VERSION,
+		medigrowth_VERSION,
 		true
 	);
 }
-add_action( 'wp_enqueue_scripts', 'swasthika_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'medigrowth_enqueue_assets' );
 
 /**
  * Register block pattern categories.
  */
-function swasthika_register_block_pattern_categories() {
+function medigrowth_register_block_pattern_categories() {
 	if ( function_exists( 'register_block_pattern_category' ) ) {
 		register_block_pattern_category(
-			'swasthika',
-			array( 'label' => __( 'Swasthika Patterns', 'swasthika' ) )
+			'medigrowth',
+			array( 'label' => __( 'medigrowth Patterns', 'medigrowth' ) )
 		);
 	}
 }
-add_action( 'init', 'swasthika_register_block_pattern_categories' );
+add_action( 'init', 'medigrowth_register_block_pattern_categories' );
 
 // Include necessary files.
-require_once SWASTHIKA_THEME_DIR . '/inc/swasthika-plugins/swasthika-plugins.php';
-require_once SWASTHIKA_THEME_DIR . '/inc/block-patterns.php';
+require_once medigrowth_THEME_DIR . '/inc/medigrowth-plugins/medigrowth-plugins.php';
+require_once medigrowth_THEME_DIR . '/inc/block-patterns.php';

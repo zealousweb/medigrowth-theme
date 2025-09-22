@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Search Result
- * Slug: swasthika/search-result
+ * Slug: medigrowth/search-result
  * Inserter: no
  * Block Types: core/query
  */
@@ -46,7 +46,7 @@
 
 		<!-- wp:query-no-results -->
 		<!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when a query returns no results.","fontSize":"body-xl"} -->
-		<p class="has-text-align-center has-body-xl-font-size"><?php echo esc_html_e( 'No results found', 'swasthika' ); ?></p>
+		<p class="has-text-align-center has-body-xl-font-size"><?php echo esc_html_e( 'No results found', 'medigrowth' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- /wp:query-no-results -->
 	</div>
