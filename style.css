@@ -5,7 +5,7 @@ Author: ZealousWeb
 Author URI: https://www.zealousweb.com/
 Description: MediGrowth is a modern Full Site Editing (FSE) WordPress theme designed for the healthcare industry—ideal for clinics, hospitals, wellness centers, and practitioners. It includes pre-built block patterns and templates like Hero Banners, Blog Listings, and customizable Header/Footer layouts—all editable via the WordPress Site Editor, no coding needed. Seamlessly integrates with Fluent Forms for appointment bookings and contact forms. Built with theme.json and block templates, it ensures fast performance, accessibility, and design consistency.
 Requires at least: 6.1
-Tested up to: 6.8.2
+Tested up to: 6.8
 Requires PHP: 7.4
 Version: 1.0
 License: GNU General Public License v2 or later
@@ -30,6 +30,65 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+/*=====================================
+Accessibility: Skip Link & Focus Styles
+========================================*/
+:focus-visible {
+  outline: 2px solid var(--wp--preset--color--primary-100) !important;
+  outline-offset: 2px;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 8px 16px;
+  z-index: 100000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 2px;
+  transform: translateY(-100%);
+}
+
+/* Show skip link on keyboard focus */
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Screen reader text utility */
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Ensure screen reader text is visible when focused */
+.screen-reader-text:focus,
+.screen-reader-text:focus-visible {
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Global focus-visible styles for all interactive elements */
+:focus-visible {
+  outline: 2px solid var(--wp--preset--color--primary-100);
+  outline-offset: 2px;
 }
 
 /*=====================================
@@ -150,7 +209,8 @@ Button Fill
   display: none;
 }
 
-.wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content:hover {
+.wp-block-navigation
+  .wp-block-navigation-item__content.wp-block-navigation-item__content:hover {
   color: var(--wp--preset--color--contrast);
 }
 
@@ -185,11 +245,43 @@ Padding and Margin default in mobile
 /*=====================================
 Header
 ========================================*/
-.site-header .wp-block-navigation .has-child .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+
+.wp-block-navigation
+  .has-child
+  .wp-block-navigation__submenu-container
+  .wp-block-navigation__submenu-container {
+  left: 100%;
+  top: 50%;
+}
+
+.wp-block-navigation
+  .has-child
+  .wp-block-navigation__submenu-container
+  > li
+  > .wp-block-navigation__submenu-container {
+  top: 0;
+}
+
+
+.wp-block-navigation
+  .has-child
+  .wp-block-navigation__submenu-container
+  .wp-block-navigation__submenu-container
+  .wp-block-navigation__submenu-container {
+  left: 0;
+  top: 100%;
+}
+
+.site-header
+  .wp-block-navigation
+  .has-child
+  .wp-block-navigation__submenu-container
+  .wp-block-navigation-item__content {
   padding: 0.75rem 1rem;
 }
 
-.site-header .wp-block-navigation-item.current-menu-item
+.site-header
+  .wp-block-navigation-item.current-menu-item
   > .wp-block-navigation-item__content {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
@@ -201,10 +293,45 @@ Header
   display: none;
 }
 
-.site-header .wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+.site-header button.wp-block-navigation__submenu-icon:hover {
+  background-color: transparent !important;
+  color: var(--wp--preset--color--primary-800);
+  border: none !important;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item:hover > a:after {
+  transform: rotate(180deg);
+}
+
+/* Submenu accessibility icons for desktop navigation */
+.site-header
+  .wp-block-navigation-item.has-child
+  > .wp-block-navigation-item__content::after {
+  content: "▼";
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: 0.625rem;
+  vertical-align: middle;
+}
+
+.site-header
+  .wp-block-navigation-item
+  > ul
+  > .wp-block-navigation-item.has-child
+  > .wp-block-navigation-item__content::after {
+  transform: rotate(-90deg);
+}
+
+.site-header
+  .wp-block-navigation
+  .has-child
+  .wp-block-navigation__submenu-container {
   min-width: 14.625rem !important;
-  border-radius: 0.75rem;
-  overflow: hidden !important;
+  /* border-radius: 0.75rem; */
+  /* overflow: hidden !important; */
 }
 
 .site-header .wp-block-navigation > .wp-block-navigation-item {
@@ -230,10 +357,53 @@ header.stuck {
   box-shadow: 0rem 0.875rem 1rem rgba(2, 52, 104, 0.05);
 }
 
-.wp-block-navigation.items-justified-right .wp-block-navigation__container .has-child .wp-block-navigation__submenu-container {
+.wp-block-navigation.items-justified-right
+  .wp-block-navigation__container
+  .has-child
+  .wp-block-navigation__submenu-container {
   left: -1.25rem;
   right: 0;
 }
+
+@media screen and (max-width: 61.9375rem) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(
+      .is-menu-open
+    ) {
+    display: none !important;
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    .has-child
+    .wp-block-navigation__submenu-container
+    .wp-block-navigation__submenu-container {
+    height: auto !important;
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    .wp-block-navigation__container {
+    gap: 10px;
+  }
+
+  .site-header
+    .wp-block-navigation-item.has-child
+    > .wp-block-navigation-item__content::after {
+    display: none;
+  }
+
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    ul
+    li
+    button
+    svg {
+    display: none !important;
+  }
+}
+
 /*=====================================
 search button
 ========================================*/
@@ -241,15 +411,18 @@ search button
   padding: 0.25rem;
   max-width: 100% !important;
 }
+
 .site-header .wp-block-search button svg {
   width: 2.5rem;
   height: 2.5rem;
   transform: scaleX(-1);
 }
+
 .site-header button:hover {
   background-color: var(--wp--preset--color--contrast) !important;
   color: var(--wp--preset--color--base);
 }
+
 .site-header .wp-block-search__inside-wrapper {
   display: flex;
   flex: auto;
@@ -258,9 +431,11 @@ search button
   align-items: center;
   padding: 0.313rem;
 }
+
 .site-header .wp-block-search__inside-wrapper {
   position: relative;
 }
+
 .site-header .wp-block-search__input {
   font-size: 1rem;
   margin-right: 0.625rem;
@@ -269,8 +444,9 @@ search button
   z-index: 99999999;
   width: 500px;
 }
+
 .site-header form button {
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -303,14 +479,19 @@ search button
     padding-top: 3.125rem;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content {
     display: flex !important;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 3.125rem 1.25rem;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul {
     width: 100%;
   }
 
@@ -324,59 +505,135 @@ search button
     flex-grow: unset;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li {
     border-bottom: 1px solid var(--wp--preset--color--secondary-300);
     width: 100%;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li button {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li
+    button {
     position: absolute;
     right: 0.625rem;
     top: 0.938rem;
     display: block !important;
     height: 0.938rem;
     width: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li.current-menu-item .wp-block-navigation-item__content {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li
+    button:hover,
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li
+    button:focus-visible {
+    outline: 2px solid var(--wp--preset--color--primary-100);
+    outline-offset: 2px;
+  }
+
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li.current-menu-item
+    .wp-block-navigation-item__content {
     text-decoration: none !important;
     color: var(--wp--preset--color--secondary) !important;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li button svg {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li
+    button
+    svg {
     height: 0.938rem;
     width: 1.5rem;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li.has-child ul {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li.has-child
+    ul {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li.has-child ul li a {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li.has-child
+    ul
+    li
+    a {
     padding: 0.625rem 0.125rem !important;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li.has-child ul li {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li.has-child
+    ul
+    li {
     border-bottom: 0;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li a {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li
+    a {
     font-size: 1.125rem;
     font-weight: 700;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul li a:hover {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul
+    li
+    a:hover {
     text-decoration: none;
     color: var(--wp--preset--color--secondary);
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content ul,
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    ul,
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    .wp-block-navigation-item {
     align-items: flex-start !important;
   }
 
-  header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-close {
+  header
+    .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-close {
     max-width: 100% !important;
   }
 
@@ -410,10 +667,12 @@ Hero Banner
   align-items: center;
   min-height: calc(100vh - 86px);
 }
+
 .hero-cover {
   position: relative;
   z-index: 0;
 }
+
 .hero-cover::before {
   content: "";
   position: absolute;
@@ -424,6 +683,7 @@ Hero Banner
   mix-blend-mode: multiply;
   pointer-events: none;
 }
+
 .hero-cover::before {
   background: linear-gradient(
     90deg,
@@ -433,6 +693,7 @@ Hero Banner
   );
   z-index: 1;
 }
+
 .hero-cover .inner-content {
   position: relative;
   z-index: 2;
@@ -444,12 +705,14 @@ Hero Banner
     background-position-x: right;
   }
 
-  .hero-banner .is-layout-flex
+  .hero-banner
+    .is-layout-flex
     > .wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
     flex-basis: 100% !important;
     flex-grow: 1;
   }
 }
+
 /*=====================================
 Our Services
 ========================================*/
@@ -474,6 +737,7 @@ Our Services
     justify-content: flex-start;
   }
 }
+
 /*=====================================
 Patient Reviews
 ========================================*/
@@ -519,11 +783,15 @@ Blog Hightlight
   z-index: 1;
 }
 
-.blog-highlight .has-post-thumbnail .has-luminous-vivid-orange-background-color {
+.blog-highlight
+  .has-post-thumbnail
+  .has-luminous-vivid-orange-background-color {
   transition: 0.3s all;
 }
 
-.blog-highlight .has-post-thumbnail:hover .has-luminous-vivid-orange-background-color {
+.blog-highlight
+  .has-post-thumbnail:hover
+  .has-luminous-vivid-orange-background-color {
   background-color: var(--wp--preset--color--primary-300) !important;
 }
 
@@ -557,9 +825,11 @@ Blog Hightlight
   margin-top: auto;
   width: 100%;
 }
+
 .blog-card > .wp-block-group > .wp-block-group {
   width: 100%;
 }
+
 /*=====================================
 About Page
 ========================================*/
@@ -891,14 +1161,16 @@ Blog Pagination
   background-color: var(--wp--preset--color--primary-300);
   text-decoration: none;
   justify-content: center;
-  transition: .3s all;
+  transition: 0.3s all;
 }
+
 .blog-pagination .page-numbers:hover,
 .blog-pagination .wp-block-query-pagination-next-arrow:hover,
 .blog-pagination .wp-block-query-pagination-previous-arrow:hover {
   background-color: var(--wp--preset--color--primary-100) !important;
   color: var(--wp--preset--color--base) !important;
 }
+
 .blog-pagination .page-numbers.current {
   background-color: var(--wp--preset--color--primary-100) !important;
   color: var(--wp--preset--color--base) !important;
@@ -907,7 +1179,7 @@ Blog Pagination
 select {
   appearance: none;
   background-image: url(assets/images/select.svg) !important;
-  background-size: .88rem .44rem !important;
+  background-size: 0.88rem 0.44rem !important;
   background-position: right 1rem center !important;
   background-repeat: no-repeat !important;
 }
@@ -918,17 +1190,21 @@ Search Page
 .search-page button:hover {
   background-color: var(--wp--preset--color--contrast) !important;
 }
+
 .search-page .wp-block-search button.wp-block-search__button {
   padding: 0.25rem;
 }
+
 .search-page form button {
-  transition: .3s all;
+  transition: 0.3s all;
 }
+
 .search-page .wp-block-search button svg {
   width: 2.5rem;
   height: 2.5rem;
   transform: scaleX(-1);
 }
+
 .search-page .wp-block-search__input {
   border: 0.0625rem solid var(--wp--preset--color--primary-500) !important;
   background-color: var(--wp--preset--color--primary-300);
@@ -1035,6 +1311,7 @@ footer .ff-default .ff-el-form-control:focus {
   color: var(--wp--preset--color--custom-primary-gallery);
   outline: none;
 }
+
 /*=====================================
 Fluent form
 ========================================*/

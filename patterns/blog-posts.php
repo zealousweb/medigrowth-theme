@@ -3,7 +3,7 @@
  * Title: Blog Posts
  * Slug: medigrowth/blog-posts
  * Categories: medigrowth-fse
- * Block Types: core/post-conent, core/query, core/post-title
+ * Block Types: core/post-content, core/query, core/post-title
  *
  * @package medigrowth
  * @since 1.0
@@ -15,7 +15,7 @@
 <div class="wp-block-group"><!-- wp:bcn/breadcrumb-trail /-->
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading"><?php echo esc_html_e( 'Blog', 'medigrowth' ); ?></h1>
+<h1 class="wp-block-heading"><?php esc_html_e( 'Blog', 'medigrowth' ); ?></h1>
 <!-- /wp:heading --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></main>
@@ -51,7 +51,7 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when a query returns no results.","fontSize":"body-xl"} -->
-<p class="has-text-align-center has-body-xl-font-size"><?php echo esc_html_e( 'No results found', 'medigrowth' ); ?></p>
+<p class="has-text-align-center has-body-xl-font-size"><?php esc_html_e( 'No results found', 'medigrowth' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></div>

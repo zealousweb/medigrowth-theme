@@ -15,17 +15,17 @@
 <div class="wp-block-column"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"top"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"layout":{"selfStretch":"fixed","flexSize":"20%"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":225,"width":"64px","height":"64px","scale":"contain","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/regularly-checkup.avif'; ?>" alt="<?php echo esc_attr_e( 'Regularly Checkup', 'medigrowth' ); ?>" class="wp-image-225" style="object-fit:contain;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/regularly-checkup.avif'; ?>" alt="<?php esc_attr_e( 'Regularly Checkup', 'medigrowth' ); ?>" class="wp-image-225" style="object-fit:contain;width:64px;height:64px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"left":"16px"}},"layout":{"selfStretch":"fixed","flexSize":"80%"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-left:16px"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}},"spacing":{"margin":{"bottom":"4px"}}},"textColor":"primary-100","fontSize":"body-xxl"} -->
-<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-body-xxl-font-size" style="margin-bottom:4px"><?php echo esc_html_e( 'Regularly Checkup', 'medigrowth' ); ?></h2>
+<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-body-xxl-font-size" style="margin-bottom:4px"><?php esc_html_e( 'Regularly Checkup', 'medigrowth' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|muted-navy"}}}},"textColor":"muted-navy","fontSize":"body-md"} -->
-<p class="has-muted-navy-color has-text-color has-link-color has-body-md-font-size"><?php echo esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Egestas luctus felis turpis.', 'medigrowth' ); ?></p>
+<p class="has-muted-navy-color has-text-color has-link-color has-body-md-font-size"><?php esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Egestas luctus felis turpis.', 'medigrowth' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -35,17 +35,17 @@
 <div class="wp-block-column"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"top"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"layout":{"selfStretch":"fixed","flexSize":"20%"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":247,"width":"64px","height":"64px","scale":"contain","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/personalized-healthcare.avif'; ?>" alt="<?php echo esc_attr_e( 'Personalized Healthcare', 'medigrowth' ); ?>" class="wp-image-247" style="object-fit:contain;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/personalized-healthcare.avif'; ?>" alt="<?php esc_attr_e( 'Personalized Healthcare', 'medigrowth' ); ?>" class="wp-image-247" style="object-fit:contain;width:64px;height:64px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"left":"16px"}},"layout":{"selfStretch":"fixed","flexSize":"80%"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-left:16px"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}},"spacing":{"margin":{"bottom":"4px"}}},"textColor":"primary-100","fontSize":"body-xxl"} -->
-<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-body-xxl-font-size" style="margin-bottom:4px"><?php echo esc_html_e( 'Personalized Healthcare', 'medigrowth' ); ?></h2>
+<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-body-xxl-font-size" style="margin-bottom:4px"><?php esc_html_e( 'Personalized Healthcare', 'medigrowth' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|muted-navy"}}}},"textColor":"muted-navy","fontSize":"body-md"} -->
-<p class="has-muted-navy-color has-text-color has-link-color has-body-md-font-size"><?php echo esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Vel maecenas egestas', 'medigrowth' ); ?></p>
+<p class="has-muted-navy-color has-text-color has-link-color has-body-md-font-size"><?php esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Vel maecenas egestas', 'medigrowth' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -55,17 +55,17 @@
 <div class="wp-block-column"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"top"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"layout":{"selfStretch":"fixed","flexSize":"20%"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":252,"width":"64px","height":"64px","scale":"contain","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/nuclear-stress.avif'; ?>" alt="<?php echo esc_attr_e( 'Nuclear Stress', 'medigrowth' ); ?>" class="wp-image-252" style="object-fit:contain;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/nuclear-stress.avif'; ?>" alt="<?php esc_attr_e( 'Nuclear Stress', 'medigrowth' ); ?>" class="wp-image-252" style="object-fit:contain;width:64px;height:64px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"left":"16px"}},"layout":{"selfStretch":"fixed","flexSize":"80%"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-left:16px"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}},"spacing":{"margin":{"bottom":"4px"}}},"textColor":"primary-100","fontSize":"body-xxl"} -->
-<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-body-xxl-font-size" style="margin-bottom:4px"><?php echo esc_html_e( 'Nuclear Stress Testing', 'medigrowth' ); ?></h2>
+<h2 class="wp-block-heading has-primary-100-color has-text-color has-link-color has-body-xxl-font-size" style="margin-bottom:4px"><?php esc_html_e( 'Nuclear Stress Testing', 'medigrowth' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|muted-navy"}}}},"textColor":"muted-navy","fontSize":"body-md"} -->
-<p class="has-muted-navy-color has-text-color has-link-color has-body-md-font-size"><?php echo esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Vitae.', 'medigrowth' ); ?></p>
+<p class="has-muted-navy-color has-text-color has-link-color has-body-md-font-size"><?php esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Vitae.', 'medigrowth' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

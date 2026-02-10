@@ -38,6 +38,7 @@ window.addEventListener("resize", initSubmenuToggle);
  */
 function handleScroll() {
 	let header = document.querySelector("header.site-header");
+	if (!header) return;
 	let headerHeight = header.offsetHeight;
 
 	if (window.scrollY > headerHeight) {
