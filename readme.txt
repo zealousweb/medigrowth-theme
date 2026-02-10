@@ -38,6 +38,11 @@ Files:
 
 == Changelog ==
 
+= 1.1 =
+
+Theme Reviewer Issues fixed and release new version.
+https://themes.trac.wordpress.org/ticket/251681
+
 = 1.0 =
 
 Initial release
