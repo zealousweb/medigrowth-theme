@@ -56,18 +56,30 @@ function medigrowth_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'medigrowth_enqueue_assets' );
 
+
+
 /**
- * Register block pattern categories.
+ * Register block styles.
  */
-function medigrowth_register_block_pattern_categories() {
-	if ( function_exists( 'register_block_pattern_category' ) ) {
-		register_block_pattern_category(
-			'medigrowth',
-			array( 'label' => __( 'medigrowth Patterns', 'medigrowth' ) )
+function medigrowth_register_block_styles() {
+	if ( function_exists( 'register_block_style' ) ) {
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'shadow',
+				'label' => __( 'Shadow', 'medigrowth' ),
+			)
+		);
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'fill',
+				'label' => __( 'Fill', 'medigrowth' ),
+			)
 		);
 	}
 }
-add_action( 'init', 'medigrowth_register_block_pattern_categories' );
+add_action( 'init', 'medigrowth_register_block_styles' );
 
 // Include necessary files.
 require_once medigrowth_THEME_DIR . '/inc/medigrowth-plugins/medigrowth-plugins.php';

@@ -5,12 +5,15 @@
  * Inserter: no
  */
 ?>
+
+<a class="skip-link screen-reader-text" href="#main-content"><?php esc_html_e( 'Skip to content', 'medigrowth' ); ?></a>
+
 <!-- wp:group {"className":"stuck","style":{"position":{"type":"sticky","top":"0px"}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":"1360px"}} -->
 <div class="wp-block-group stuck has-base-background-color has-background"><!-- wp:columns {"verticalAlignment":"center","isStackedOnMobile":false,"style":{"spacing":{"padding":{"top":"16px","bottom":"16px"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center is-not-stacked-on-mobile" style="padding-top:16px;padding-bottom:16px"><!-- wp:column {"verticalAlignment":"center","width":"30%","layout":{"type":"default"}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:30%"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"lightbox":{"enabled":false},"width":"220px","sizeSlug":"full","linkDestination":"custom","className":"site-logo"} -->
-<figure class="wp-block-image size-full is-resized site-logo"><a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/header-logo.svg'; ?>" alt="<?php echo esc_attr_e( 'Header Logo', 'medigrowth' ); ?>" style="width:220px" /></a></figure>
+<figure class="wp-block-image size-full is-resized site-logo"><a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/header-logo.svg'; ?>" alt="<?php esc_attr_e( 'Header Logo', 'medigrowth' ); ?>" style="width:220px" /></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
