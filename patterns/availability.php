@@ -38,7 +38,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"placeholder":"Content…","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary-100"}}}},"textColor":"primary-100","fontSize":"body-md"} -->
-<p class="has-primary-100-color has-text-color has-link-color has-body-md-font-size"><a href="mailto:info@medigrowth.com"><?php esc_html_e( 'info@medigrowth.com', 'medigrowth' ); ?></a></p>
+<p class="has-primary-100-color has-text-color has-link-color has-body-md-font-size"><a href="mailto:example@example.com"><?php esc_html_e( 'example@example.com', 'medigrowth' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
