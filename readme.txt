@@ -43,6 +43,8 @@ Files:
 Theme Reviewer Issues fixed and release new version.
 https://themes.trac.wordpress.org/ticket/256828
 
+The 404 image has been removed from the 404 page.
+
 = 1.2 =
 
 Theme Reviewer Issues fixed and release new version.
@@ -117,11 +119,6 @@ Smiling man in denim jacket
 Free public domain CC0 image.
 patient-resources-image-left.avif
 https://www.rawpixel.com/image/17299290/compassionate-hospital-care-scene
-
-404 background.
-Free public domain CC0 image.
-404-background.avif
-
 
 === Fonts ===
 
