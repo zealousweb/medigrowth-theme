@@ -262,7 +262,6 @@ Header
   top: 0;
 }
 
-
 .wp-block-navigation
   .has-child
   .wp-block-navigation__submenu-container
@@ -1103,11 +1102,6 @@ Blog Detail Page
   .error-page p {
     font-size: 1.875rem !important;
   }
-}
-
-.error-page {
-  position: relative;
-  height: calc(100vh - 86px);
 }
 
 .error-page-bg {
