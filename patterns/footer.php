@@ -16,7 +16,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="margin-top:0"><!-- wp:fluentform/guten-block {"formId":"2"} /--></div>
+<div class="wp-block-group" style="margin-top:0"><!-- wp:fluentfom/guten-block {"formId":"2"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"16px"}}},"layout":{"type":"constrained"}} -->
