@@ -3,7 +3,7 @@ Contributors: ZealousWeb
 Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: medigrowth
@@ -38,6 +38,11 @@ Files:
 
 == Changelog ==
 
+= 1.4 =
+
+Theme Reviewer Issues fixed and release new version.
+https://themes.trac.wordpress.org/ticket/258924
+
 = 1.3 =
 
 Theme Reviewer Issues fixed and release new version.
@@ -56,7 +61,7 @@ Initial release
 
 == Copyright ==
 MediGrowth WordPress Theme
-Copyright © 2025 ZealousWeb
+Copyright © 2026 ZealousWeb
 MediGrowth is distributed under the terms of the GNU General Public License v2 or later.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License or (at your option) any later version.
@@ -110,12 +115,12 @@ Free public domain CC0 image.
 client-profile.avif
 https://www.rawpixel.com/image/15338602/smiling-man-denim-jacket
 
-Smiling man in denim jacket
+Surgeons Performing Intense Operation
 Free public domain CC0 image.
 treatment-philosophy.avif
 https://www.rawpixel.com/image/17318955/surgeons-performing-intense-operation
 
-Smiling man in denim jacket
+Compassionate hospital care scene
 Free public domain CC0 image.
 patient-resources-image-left.avif
 https://www.rawpixel.com/image/17299290/compassionate-hospital-care-scene
