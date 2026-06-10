@@ -3,7 +3,7 @@ Contributors: ZealousWeb
 Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: medigrowth
@@ -37,6 +37,10 @@ Files:
 `screenshot.jpg` – Screenshot shown in the dashboard
 
 == Changelog ==
+
+= 1.6 =
+
+Theme Upload time get issue on wordpress.org resolve it and reupload it.
 
 = 1.5 =
 
