@@ -7,7 +7,8 @@ Description: MediGrowth is a modern Full Site Editing (FSE) WordPress theme desi
 Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 7.2
-Version: 1.4
+Version: 1.5
+Copyright: (C) 2026 ZealousWeb
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: medigrowth
@@ -19,6 +20,7 @@ Styles intended only for the front.
 ========================================*/
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -28,16 +30,40 @@ html {
 }
 
 body {
+  height: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+.wp-site-blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 /*=====================================
 Accessibility: Skip Link & Focus Styles
 ========================================*/
 :focus-visible {
+  outline: 1px solid var(--wp--preset--color--primary-100) !important;
+  outline-offset: 1px;
+}
+
+.skip-link.screen-reader-text:focus {
+  left: 50%;
+  top: 0px;
+  border-radius: 0 0 8px 8px;
+  transform: translateX(-50%);
+  background-color: #dd6b4d;
+  clip-path: none;
+  color: #ffffff;
+  padding: 0px 15px 4px;
+  font-size: 16px;
+}
+
+.skip-link.screen-reader-text:focus-visible {
   outline: 2px solid var(--wp--preset--color--primary-100) !important;
-  outline-offset: 2px;
 }
 
 /* Skip Link */
@@ -90,6 +116,14 @@ Accessibility: Skip Link & Focus Styles
   outline: 2px solid var(--wp--preset--color--primary-100);
   outline-offset: 2px;
 }
+
+#main-content {
+  scroll-margin-top: 106px;
+}
+
+/* #wpadminbar {
+  height: 0;
+} */
 
 /*=====================================
 Typography

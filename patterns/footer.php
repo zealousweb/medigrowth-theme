@@ -8,11 +8,11 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"50px","bottom":"50px"}},"position":{"type":""}},"backgroundColor":"primary-800","layout":{"type":"constrained","wideSize":"840px"}} -->
 <div class="wp-block-group has-primary-800-background-color has-background" style="padding-top:50px;padding-bottom:50px"><!-- wp:group {"style":{"border":{"bottom":{"width":"1px"}},"spacing":{"blockGap":"0","padding":{"bottom":"var:preset|spacing|40","top":"30px"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="border-bottom-width:1px;padding-top:30px;padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"full","linkDestination":"custom","align":"center"} -->
-<figure class="wp-block-image aligncenter size-full"><a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) . '/assets/images/footer-logo.svg'; ?>" alt="<?php esc_attr_e( 'Footer Logo', 'medigrowth' ); ?>" /></a></figure>
+<figure class="wp-block-image aligncenter size-full"><a href="http://192.168.1.81/shared-projects/zealousweb/free-theme/medigrowth"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/footer-logo.svg" alt="Footer Logo"/></a></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":6,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"textColor":"base"} -->
-<h6 class="wp-block-heading has-text-align-center has-base-color has-text-color has-link-color" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"><?php esc_html_e( 'Lorem ipsum dolor sit amet consectetur. Id sed diam venenatis pharetra luctus eu.', 'medigrowth' ); ?></h6>
+<h6 class="wp-block-heading has-text-align-center has-base-color has-text-color has-link-color" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)">Lorem ipsum dolor sit amet consectetur. Id sed diam venenatis pharetra luctus eu.</h6>
 <!-- /wp:heading -->
 
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
@@ -26,7 +26,7 @@
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"padding":{"top":"40px"}}},"textColor":"base","fontSize":"body-md"} -->
-<p class="has-text-align-center has-base-color has-text-color has-link-color has-body-md-font-size" style="padding-top:40px"><?php echo esc_html( get_bloginfo( 'name' ) ) . ' &copy; ' . esc_html( gmdate( 'Y' ) ) . '. ' . esc_html__( 'All Rights Reserved.', 'medigrowth' ); ?></p>
+<p class="has-text-align-center has-base-color has-text-color has-link-color has-body-md-font-size" style="padding-top:40px">MediGrowth © 2025. All Rights Reserved.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

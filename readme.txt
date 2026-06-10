@@ -3,8 +3,9 @@ Contributors: ZealousWeb
 Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later
+Copyright: (C) 2026 ZealousWeb
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: medigrowth
 Tags: full-site-editing, block-patterns
@@ -37,6 +38,11 @@ Files:
 `screenshot.jpg` – Screenshot shown in the dashboard
 
 == Changelog ==
+
+= 1.5 =
+
+Theme Reviewer Issues fixed and release new version.
+https://themes.trac.wordpress.org/ticket/268024
 
 = 1.4 =
 
